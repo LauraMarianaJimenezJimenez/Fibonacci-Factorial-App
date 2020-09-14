@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.80"
             android:background="@color/colorAccent"
-            android:text="TextView"
             android:textColor="@android:color/white"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:alpha="0.80"
             android:background="@color/colorAccent"
-            android:text="TextView"
             android:textColor="@android:color/white"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
 

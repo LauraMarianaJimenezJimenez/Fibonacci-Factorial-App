@@ -20,11 +20,16 @@ public class MainActivity extends AppCompatActivity {
         btnFact = findViewById(R.id.btbFact);
         btnFibo = findViewById(R.id.btnFibo);
         btnPaises = findViewById(R.id.btnPaises);
+        spnNumeros = findViewById(R.id.spnNumeros);
+        edtFiboNumber = findViewById(R.id.edtFiboNumber);
 
         btnFact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(view.getContext(),FactorialActivity.class);
+                String factorialString = spnNumeros.getSelectedItem().toString();
+                int factorial = Integer.parseInt(factorialString);
+                i.putExtra("factorial", factorial);
                 startActivity(i);
             }
         });
