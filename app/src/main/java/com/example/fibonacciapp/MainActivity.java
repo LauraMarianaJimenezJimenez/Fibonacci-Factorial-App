@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         btnFact = findViewById(R.id.btbFact);
         btnFibo = findViewById(R.id.btnFibo);
         btnPaises = findViewById(R.id.btnPaises);
-        spnNumeros = findViewById(R.id.spnNumeros);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
 
