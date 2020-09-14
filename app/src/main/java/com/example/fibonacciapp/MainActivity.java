@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnPaises = findViewById(R.id.btnPaises);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
+        spnNumeros = findViewById(R.id.spnNumeros);
 
 
         btnFibo.setOnClickListener(new View.OnClickListener() {
