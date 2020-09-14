@@ -21,10 +21,8 @@ public class MainActivity extends AppCompatActivity {
         btnFact = findViewById(R.id.btbFact);
         btnFibo = findViewById(R.id.btnFibo);
         btnPaises = findViewById(R.id.btnPaises);
-<<<<<<< refs/remotes/origin/master
         spnNumeros = findViewById(R.id.spnNumeros);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
-=======
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
 
 
@@ -38,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
->>>>>>> Added Fibonacci Activity
 
         btnFact.setOnClickListener(new View.OnClickListener() {
             @Override
