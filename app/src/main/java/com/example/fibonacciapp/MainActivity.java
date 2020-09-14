@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnFibo = findViewById(R.id.btnFibo);
         btnPaises = findViewById(R.id.btnPaises);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
-          spnNumeros = findViewById(R.id.spnNumeros);
-
+        edtFiboNumber = findViewById(R.id.edtFiboNumber);
 
 
         btnFibo.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-       
 
         btnFact.setOnClickListener(new View.OnClickListener() {
             @Override
