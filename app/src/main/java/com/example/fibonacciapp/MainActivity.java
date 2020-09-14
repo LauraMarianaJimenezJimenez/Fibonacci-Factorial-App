@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         btnFibo = findViewById(R.id.btnFibo);
         btnPaises = findViewById(R.id.btnPaises);
         edtFiboNumber = findViewById(R.id.edtFiboNumber);
+          spnNumeros = findViewById(R.id.spnNumeros);
+
 
 
         btnFibo.setOnClickListener(new View.OnClickListener() {
@@ -34,12 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+       
 
         btnFact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(view.getContext(),FactorialActivity.class);
+                String factorialString = spnNumeros.getSelectedItem().toString();
+                int factorial = Integer.parseInt(factorialString);
+                i.putExtra("factorial", factorial);
                 startActivity(i);
             }
         });
