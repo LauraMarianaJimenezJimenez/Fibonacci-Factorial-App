@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/llFibo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -18,13 +19,11 @@
             <ImageButton
                 android:id="@+id/imgFibo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="400dp"
+                android:backgroundTint="#fbfbf9"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/fibonacci" />
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
         </LinearLayout>
     </ScrollView>
 
