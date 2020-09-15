@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnFibo, btnFact, btnPaises;
@@ -30,10 +31,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(view.getContext(),FibonacciActivity.class);
+
                 String num = edtFiboNumber.getText().toString();
-                intent.putExtra("numFibo", num);
-                startActivity(intent);
+                if(num.equals(""))
+                {
+                    Toast.makeText(getApplicationContext(), "Ingrese número Fibonacci", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Intent intent = new Intent(view.getContext(),FibonacciActivity.class);
+                    intent.putExtra("numFibo", num);
+                    startActivity(intent);
+                }
+
+
             }
         });
 
@@ -47,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        btnPaises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),CountriesList.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
