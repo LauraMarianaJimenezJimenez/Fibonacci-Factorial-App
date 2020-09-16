@@ -37,7 +37,8 @@ public class FibonacciActivity extends AppCompatActivity {
 
     public void Fibo(Long n)
     {
-        int t1 = 0, t2 = 1;
+        long t1 = 0;
+        long t2 = 1;
         String num;
         num = Long.toString(t1);
         LinearLayout llFibo = (LinearLayout) findViewById(R.id.llFibo);
@@ -47,7 +48,7 @@ public class FibonacciActivity extends AppCompatActivity {
         llFibo.addView(textViewNum);
         for (int i = 1; i <= n; ++i)
         {
-            int sum = t1 + t2;
+            Long sum = t1 + t2;
             t1 = t2;
             t2 = sum;
             num = Long.toString(t1);
