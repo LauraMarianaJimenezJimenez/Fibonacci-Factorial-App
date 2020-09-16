@@ -35,6 +35,22 @@ public class FibonacciActivity extends AppCompatActivity {
         }
 
 
+            String numFibo = getIntent().getStringExtra("numFibo");
+            Integer n = Integer.parseInt(numFibo);
+
+            Fibo(n);
+            ImageButton btnImageFibo;
+            btnImageFibo = findViewById(R.id.imgFibo);
+            btnImageFibo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(),WebFiboActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+        }
+
 
 
     public void Fibo(Long n)

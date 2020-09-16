@@ -11,9 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Calendar;
 import java.util.Date;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnFibo, btnFact, btnPaises;
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+               
     }
 
     @Override
