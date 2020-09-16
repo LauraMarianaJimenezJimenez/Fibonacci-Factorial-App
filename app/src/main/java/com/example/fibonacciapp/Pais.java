@@ -7,7 +7,8 @@ public class Pais {
     String nombreI;
     String sigla;
 
-    public String getNombreI() {
+    public String getNombreI()
+    {
         return nombreI;
     }
 
@@ -15,11 +16,13 @@ public class Pais {
         this.nombreI = nombreI;
     }
 
-    public String getSigla() {
+    public String getSigla()
+    {
         return sigla;
     }
 
-    public void setSigla(String sigla) {
+    public void setSigla(String sigla)
+    {
         this.sigla = sigla;
     }
 
@@ -31,19 +34,23 @@ public class Pais {
         this.sigla = sigla;
     }
 
-    public String getNombre() {
+    public String getNombre()
+    {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(String nombre)
+    {
         this.nombre = nombre;
     }
 
-    public String getCapital() {
-        return nombre;
+    public String getCapital()
+    {
+        return capital;
     }
 
-    public void setCapital(String nombre) {
+    public void setCapital(String nombre)
+    {
         this.nombre = nombre;
     }
 
@@ -52,4 +59,6 @@ public class Pais {
     {
         return nombre;
     }
+
+
 }

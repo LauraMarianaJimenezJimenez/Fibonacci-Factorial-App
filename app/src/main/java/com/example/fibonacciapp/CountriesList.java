@@ -46,8 +46,15 @@ public class CountriesList extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Pais seleccionado = (Pais)lstPaises.getItemAtPosition(position);
                 Intent intent = new Intent(getBaseContext(), DetailCountryActivity.class);
+                intent.putExtra("nombre", seleccionado.getNombre());
+                intent.putExtra("capital", seleccionado.getCapital());
+                intent.putExtra("nombreI", seleccionado.getNombreI());
+                intent.putExtra("sigla", seleccionado.getSigla());
                 startActivity(intent);
+
             }
         });
 
