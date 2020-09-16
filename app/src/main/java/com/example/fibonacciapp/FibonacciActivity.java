@@ -18,6 +18,21 @@ public class FibonacciActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fibonacci);
 
+            String numFibo = getIntent().getStringExtra("numFibo");
+            Long n = Long.parseLong(numFibo);
+
+            Fibo(n);
+            ImageButton btnImageFibo;
+            btnImageFibo = findViewById(R.id.imgFibo);
+            btnImageFibo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(),WebFiboActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+        }
 
 
             String numFibo = getIntent().getStringExtra("numFibo");
@@ -38,12 +53,11 @@ public class FibonacciActivity extends AppCompatActivity {
 
 
 
-
-    public void Fibo(Integer n)
+    public void Fibo(Long n)
     {
         int t1 = 0, t2 = 1;
         String num;
-        num = Integer.toString(t1);
+        num = Long.toString(t1);
         LinearLayout llFibo = (LinearLayout) findViewById(R.id.llFibo);
         TextView textViewNum = new TextView(this);
         textViewNum.setText(num);
@@ -54,7 +68,7 @@ public class FibonacciActivity extends AppCompatActivity {
             int sum = t1 + t2;
             t1 = t2;
             t2 = sum;
-            num = Integer.toString(t1);
+            num = Long.toString(t1);
             TextView textViewNum2 = new TextView(this);
             textViewNum2 .setText(num);
             textViewNum2.setTextSize(25);

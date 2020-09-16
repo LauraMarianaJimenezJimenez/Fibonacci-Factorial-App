@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Intent intent = new Intent(view.getContext(),FibonacciActivity.class);
                     intent.putExtra("numFibo", num);
+                    rFibonacci=true;
                     startActivity(intent);
                 }
             }
@@ -75,11 +76,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(),CountriesList.class);
+                rPaises=true;
                 startActivity(intent);
             }
         });
-
-
+               
     }
 
     @Override
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             countPaises ++;
             Date cal = (Date) Calendar.getInstance().getTime();
             dtPaises = cal.toLocaleString();
-            txtCountFibo.setText("# Países: " + countPaises);
+            txtCountPaises.setText("# Países: " + countPaises);
             txtFechaPaises.setText("Última vez: "+ dtPaises);
             rPaises = false;
         }
