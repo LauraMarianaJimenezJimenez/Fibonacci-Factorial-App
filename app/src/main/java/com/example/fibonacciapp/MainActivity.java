@@ -44,6 +44,18 @@ public class MainActivity extends AppCompatActivity {
         btnFibo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                
+                String num = edtFiboNumber.getText().toString();
+                if(num.equals(""))
+                {
+                    Toast.makeText(getApplicationContext(), "Ingrese número Fibonacci", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Intent intent = new Intent(view.getContext(),FibonacciActivity.class);
+                    intent.putExtra("numFibo", num);
+                    startActivity(intent);
+                }
 
                 String num = edtFiboNumber.getText().toString();
                 if(num.equals(""))
