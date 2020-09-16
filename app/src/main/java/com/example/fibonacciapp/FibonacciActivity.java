@@ -2,10 +2,14 @@ package com.example.fibonacciapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FibonacciActivity extends AppCompatActivity {
 
@@ -14,13 +18,26 @@ public class FibonacciActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fibonacci);
 
-        String numFibo = getIntent().getStringExtra("numFibo");
-        Log.i("Numero",numFibo);
-        Integer n = Integer.parseInt(numFibo);
 
-        Fibo(n);
 
-    }
+            String numFibo = getIntent().getStringExtra("numFibo");
+            Integer n = Integer.parseInt(numFibo);
+
+            Fibo(n);
+            ImageButton btnImageFibo;
+            btnImageFibo = findViewById(R.id.imgFibo);
+            btnImageFibo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(),WebFiboActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+        }
+
+
+
 
     public void Fibo(Integer n)
     {

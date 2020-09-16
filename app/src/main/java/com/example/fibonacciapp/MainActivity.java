@@ -11,9 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Calendar;
 import java.util.Date;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnFibo, btnFact, btnPaises;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btnFibo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
                 String num = edtFiboNumber.getText().toString();
                 if(num.equals(""))
                 {
@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("numFibo", num);
                     startActivity(intent);
                 }
-
             }
         });
 
@@ -71,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        btnPaises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),CountriesList.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -95,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             rFactorial = false;
         }
 
-        if(rFibonacci == true){
+        if(rPaises == true){
             countPaises ++;
             Date cal = (Date) Calendar.getInstance().getTime();
             dtPaises = cal.toLocaleString();
